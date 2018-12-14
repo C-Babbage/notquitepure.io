@@ -31,7 +31,7 @@ jobs:
             python get-pip.py --user --no-warn-script-location
             ls -a ~
             export PATH=~/.local/bin:$PATH
-            source ~/.bash_profile
+            source ~/.profile
             pip --version
             pip install awscli --upgrade --user
             aws --version
