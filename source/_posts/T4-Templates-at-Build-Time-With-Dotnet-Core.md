@@ -1,6 +1,7 @@
 ---
 title: T4 Templates at Build Time with Dotnet Core
 date: 2018-12-13 08:21:35
+desc: Using T4 build-time templates with dotnet core cross platform
 tags:
  - dotnetcore
  - dotnetcli

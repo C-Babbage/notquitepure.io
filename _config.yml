@@ -78,7 +78,6 @@ plugin:
   - hexo-asset-image
   - hexo-prism-plugin
   - hexo-toc
-  # ... other plugins you'd like to enable
 
 # Generate archive page
 archive_generator:
@@ -109,6 +108,7 @@ prism_plugin:
   mode: 'preprocess'
   theme: 'default'
   line_number: true 
+  
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
