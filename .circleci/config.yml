@@ -34,10 +34,10 @@ jobs:
             source ~/.profile
             pip --version
             pip install awscli --upgrade --user
-            aws --version
       - run:
           name: Push to S3 bucket
           command: |
             aws configure list
+            aws --version
             cd public
             aws s3 sync . s3://not-quite-pure.io
