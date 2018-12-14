@@ -38,6 +38,7 @@ jobs:
           name: Push to S3 bucket
           command: |
             export PATH=~/.local/bin:$PATH
+            source ~/.profile
             aws configure list
             aws --version
             cd public
