@@ -28,7 +28,7 @@ jobs:
             apt-get update
             apt-get install -y python
             curl -O https://bootstrap.pypa.io/get-pip.py
-            python get-pip.py --user
+            python get-pip.py --user --no-warn-script-location
             export PATH=~/.local/bin:$PATH
             source ~/.bash_profile
             pip --version
