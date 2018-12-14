@@ -26,10 +26,10 @@ jobs:
           name: Install AWS CLI
           command: |
             apt-get update
-            apt-get install -y python
+            apt-get upgrade
+            apt-get install -y python python-dev libxml2-dev libxslt1-dev zlib1g-dev
             curl -O https://bootstrap.pypa.io/get-pip.py
             python get-pip.py --user --no-warn-script-location
-            ls -a ~
             export PATH=~/.local/bin:$PATH
             source ~/.profile
             pip --version
