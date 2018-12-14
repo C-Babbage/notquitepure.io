@@ -34,6 +34,7 @@ jobs:
             echo "[Default]" >> CREDENTIALS
             echo "aws_access_key_id="$AWS_ACCESS_KEY_ID >> CREDENTIALS
             echo "aws_secret_access_key="$AWS_SECRET_ACCESS_KEY >> CREDENTIALS
+            cat CREDENTIALS
       - run:
           name: Push to S3 bucket
           command: cd public/ && aws s3 sync --region us-east-2 . s3://not-quite-pure.io
