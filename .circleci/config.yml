@@ -30,11 +30,16 @@ jobs:
       - run:
           name: Set AWS Credentials
           command: |
-            CREDENTIALS=~/.aws/credentials 
-            echo "[Default]" >> CREDENTIALS
+            CREDENTIALS=~/.aws/credentials
+            CONFIG=~/.aws/config 
+            echo "[default]" >> CREDENTIALS
             echo "aws_access_key_id="$AWS_ID >> CREDENTIALS
             echo "aws_secret_access_key="$AWS_SAK >> CREDENTIALS
+            echo "[default]" >> CONFIG
+            echo "region=us-east-2" >> CONFIG
+            echo "output=json" >> CONFIG
             cat CREDENTIALS
+            cat CONFIG
       - run:
           name: Push to S3 bucket
-          command: cd public/ && aws s3 sync --region us-east-2 . s3://not-quite-pure.io
+          command: cd public/ && aws s3 sync . s3://not-quite-pure.io
