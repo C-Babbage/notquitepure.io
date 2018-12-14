@@ -28,5 +28,12 @@ jobs:
             apt-get update
             apt-get install -y awscli
       - run:
+          name: Set AWS Credentials
+          command: |
+            CREDENTIALS=~/.aws/credentials 
+            echo "[Default]" >> CREDENTIALS
+            echo "aws_access_key_id="$AWS_ACCESS_KEY_ID >> CREDENTIALS
+            echo "aws_secret_access_key="$AWS_SECRET_ACCESS_KEY >> CREDENTIALS
+      - run:
           name: Push to S3 bucket
           command: cd public/ && aws s3 sync --region us-east-2 . s3://not-quite-pure.io
