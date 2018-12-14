@@ -23,19 +23,6 @@ jobs:
           name: Generate static website
           command: hexo generate
       - run:
-          name: Set AWS Credentials
-          command: |
-            CREDENTIALS=~/.aws/credentials
-            CONFIG=~/.aws/config 
-            echo "[default]" >> CREDENTIALS
-            echo "aws_access_key_id="$AWS_ID >> CREDENTIALS
-            echo "aws_secret_access_key="$AWS_SAK >> CREDENTIALS
-            echo "[default]" >> CONFIG
-            echo "region=us-east-2" >> CONFIG
-            echo "output=json" >> CONFIG
-            cat CREDENTIALS
-            cat CONFIG
-      - run:
           name: Install AWS CLI
           command: |
             apt-get update
