@@ -32,8 +32,8 @@ jobs:
           command: |
             CREDENTIALS=~/.aws/credentials 
             echo "[Default]" >> CREDENTIALS
-            echo "aws_access_key_id="$AWS_ACCESS_KEY_ID >> CREDENTIALS
-            echo "aws_secret_access_key="$AWS_SECRET_ACCESS_KEY >> CREDENTIALS
+            echo "aws_access_key_id="$AWS_ID >> CREDENTIALS
+            echo "aws_secret_access_key="$AWS_SAK >> CREDENTIALS
             cat CREDENTIALS
       - run:
           name: Push to S3 bucket
