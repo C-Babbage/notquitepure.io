@@ -48,4 +48,4 @@ jobs:
             aws configure list
             aws --version
             cd public
-            aws s3 sync . s3://notquitepure.info
+            aws s3 sync --acl public-read . s3://notquitepure.info
