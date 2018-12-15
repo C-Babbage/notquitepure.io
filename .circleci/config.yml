@@ -20,7 +20,9 @@ jobs:
             npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
             npm install --save hexo-prism-plugin
             cd themes/typography
+            ls
             npm install
+            cd ..
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
