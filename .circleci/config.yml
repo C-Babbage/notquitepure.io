@@ -13,21 +13,16 @@ jobs:
             git submodule update
       - run:
           name: Install Hexo CLI
-          command: npm install -g hexo-cli
+          command: yarn global add hexo-cli
       - restore_cache:
           keys:
             - npm-deps-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
           command: |
-            npm install
-            npm uninstall --save hexo-generator-category
-            npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
-            npm install --save hexo-prism-plugin
+            yarn install
             cd themes/typography
-            ls
-            npm install
-            cd ..
+            yarn install
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
