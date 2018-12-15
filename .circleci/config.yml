@@ -35,7 +35,7 @@ jobs:
       - save_cache:
           key: typography-deps-{{ checksum "themes/typography/package.json" }}
           paths:
-            - node_modules
+            - themes/typography/node_modules
       - run:
           name: Generate static website
           command: hexo generate
