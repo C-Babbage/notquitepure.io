@@ -7,6 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Git Submodule Init
+          command: |
+            git submodule init
+            git submodule update
+      - run:
           name: Install Hexo CLI
           command: npm install -g hexo-cli
       - restore_cache:
