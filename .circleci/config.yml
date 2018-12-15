@@ -16,24 +16,24 @@ jobs:
           command: yarn global add hexo-cli
       - restore_cache:
           keys:
-            - hexo-deps-{{ checksum "package.json" }}
+            - hexo-deps-v1-{{ checksum "package.json" }}
       - run:
           name: Install Hexo Dependencies
           command: yarn install
       - save_cache:
-          key: hexo-deps-{{ checksum "package.json" }}
+          key: hexo-deps-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
       - restore_cache:
           keys:
-            - typography-deps-{{ checksum "themes/typography/package.json" }}
+            - typography-deps-v1-{{ checksum "themes/typography/package.json" }}
       - run:
           name: Install Hexo Dependencies
           command: |
             cd themes/typography
             yarn install
       - save_cache:
-          key: typography-deps-{{ checksum "themes/typography/package.json" }}
+          key: typography-deps-v1-{{ checksum "themes/typography/package.json" }}
           paths:
             - themes/typography/node_modules
       - run:
