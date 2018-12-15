@@ -24,15 +24,15 @@ jobs:
           key: hexo-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
-       - restore_cache:
+      - restore_cache:
           keys:
             - typography-deps-{{ checksum "themes/typography/package.json" }}
-       - run:
+      - run:
           name: Install Hexo Dependencies
           command: |
             cd themes/typography
             yarn install
-       - save_cache:
+      - save_cache:
           key: typography-deps-{{ checksum "themes/typography/package.json" }}
           paths:
             - node_modules
