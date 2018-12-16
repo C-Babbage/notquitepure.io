@@ -42,6 +42,7 @@ jobs:
             export PATH="$(yarn global bin):$PATH"
             source ~/.profile
             hexo generate
+            mv google7d4321f593925b07.html public/google7d4321f593925b07.html
       - run:
           name: Install AWS CLI
           command: |
