@@ -88,7 +88,7 @@ The last item group for this target adds the files we removed (plus the newly ge
 </ItemGroup>
 ```
 
-It would be really nice to have the generated files deleted after running `​dotnet clean`​. One final target with a delete task should be enough. This is where we finally make use of the `​Generated`​ item we included at the start. You may have to tweak the globbing if you use a different naming strategy for generated files (personally I like the `​*.Generated.cs`​ style because it’s very explicit and makes including generated files in msbuild tasks trivial).
+It would be really nice to have the generated files deleted after running `​dotnet clean`​. One final target with a delete task should be enough. This is where we make use of the `​Generated`​ item we included at the start. You may have to tweak the globbing if you use a different naming strategy for generated files (personally I like the `​*.Generated.cs`​ style because it’s very explicit and makes including generated files in msbuild tasks trivial).
 
 ```xml
 <Target Name="TextTemplateClean" AfterTargets="Clean">
