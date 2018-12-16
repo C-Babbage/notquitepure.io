@@ -48,7 +48,7 @@ The first item group does 3 things:
 
 1. References the T5 nuget package as a dotnet CLI tool, allowing us to later invoke it using `​dotnet tt`​.
 2. Defines an item called `​TextTemplate`​ which includes all files ending with `​.Generated.tt.`
-3. `​`​Defines an item called `​Generated`​ which includes all the generated files matching `​*.Generated.cs`​ (if you’re generating other file types can specify more `​Generated`​ items).
+3. `​`​Defines an item called `​Generated`​ which includes all the generated files matching `​*.Generated.cs`​ (if you’re generating other file types you can specify more `​Generated`​ items).
 
 ```xml
 <ItemGroup>
