@@ -13,10 +13,7 @@ jobs:
             git submodule update
       - run:
           name: Install Hexo CLI
-          command: |
-            export PATH="$(yarn global bin):$PATH"
-            source ~/.profile
-            yarn global add hexo-cli
+          command: yarn global add hexo-cli
       - restore_cache:
           keys:
             - hexo-deps-v2-{{ checksum "yarn.lock" }}
@@ -41,7 +38,10 @@ jobs:
             - themes/typography/node_modules
       - run:
           name: Generate static website
-          command: hexo generate
+          command: |
+            export PATH="$(yarn global bin):$PATH"
+            source ~/.profile
+            hexo generate
       - run:
           name: Install AWS CLI
           command: |
