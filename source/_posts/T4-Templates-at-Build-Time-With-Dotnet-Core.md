@@ -16,7 +16,7 @@ Currently, T4 templates can only be run at build time as part of a `​dotnet ms
 
 The workaround is to use T5: <https://github.com/atifaziz/t5>
 
-T5 is an open source implementation of the T4 processor designed to work with Mono. It happily works with dotnet core. Though the “4” in “T4” isn’t a version number (it stands for 4 T’s: Text Template Transformation Toolkit), if it really bothers you just pretend that T5 stands for Text Template Transformation Toolkit Two.
+T5 is an open source implementation of the T4 processor designed to work with Mono. It happily works with dotnet core. Though the “4” in “T4” isn’t a version number (it's shorthand for 4 T's), if it really bothers you just pretend that T5 stands for Text Template Transformation Toolkit Two.
 
 To use it in a `​Microsoft.NET.Sdk`​ project file, include the following:
 
