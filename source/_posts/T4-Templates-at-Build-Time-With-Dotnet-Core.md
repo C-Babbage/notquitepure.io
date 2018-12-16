@@ -80,7 +80,7 @@ This next item does the heavy lifting. The `​%(TextTemplate.Identity)`​ synt
  <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tt %(TextTemplate.Identity)"/>
 ```
 
-Finally, we need to add the files we removed (plus the newly generated files) back into the upcoming compile task. We do this with a second item group.
+The last item group for this target adds the files we removed (plus the newly generated files) back into the upcoming compile task.
 
 ```xml
 <ItemGroup>
