@@ -1,4 +1,6 @@
 # notquitepure.info
-Personal dev blog built using Hexo and Typography Theme.
+[![CircleCI](https://circleci.com/gh/C-Babbage/notquitepure.io.svg?style=svg)](https://circleci.com/gh/C-Babbage/notquitepure.io)
 
-Continuous integration via CircleCI.
+My personal dev blog built using Hexo with Typography Theme.
+Hexo: (https://github.com/hexojs/hexo)
+Typography: (https://github.com/SumiMakito/hexo-theme-typography)
