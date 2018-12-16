@@ -13,7 +13,10 @@ jobs:
             git submodule update
       - run:
           name: Install Hexo CLI
-          command: yarn global add hexo-cli
+          command: |
+            export PATH="$(yarn global bin):$PATH"
+            source ~/.profile
+            yarn global add hexo-cli
       - restore_cache:
           keys:
             - hexo-deps-v2-{{ checksum "yarn.lock" }}
